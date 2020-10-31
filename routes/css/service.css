@@ -1,0 +1,66 @@
+#nav-service {
+    font-weight: bold;
+}
+
+.tab {
+    background-color: rgb(200, 214, 230);
+    color: black;
+    float: left; /*tabs go next to each other instead of under*/
+    border: none;
+    outline: none;
+    cursor: pointer; /*cursor looks like finger when it's over the tab*/
+    padding: 14px 16px;
+    font-size: 17px;
+    width: 33.333%;
+}
+
+.tab:hover {
+    background-color: rgb(162, 188, 218);
+}
+
+.tab-content {
+    color: white;
+    display: none;
+    height: 100%;
+    width: 100%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    transition: background-color 0.3s;
+    border-radius: 0 0 10px 10px;
+}
+
+.tab-content a {
+    text-decoration: underline;
+}
+
+.tab-content h2 {
+    text-align: center;
+}
+
+.row { /*column divs in row will go next to each other instead of under*/
+    display: flex;
+}
+
+.row div {
+    padding-left: 5ch;
+}
+
+.row img { /*image takes up whole column, does not overflow or underflow*/
+    width: 100%;
+}
+
+.description {
+    margin-right: 5ch;
+}
+
+#tab-1 { /*round top left corner*/
+    border-radius: 10px 0 0 0;
+}
+
+#tab-last { /*round top right corner*/
+    border-radius: 0 10px 0 0;
+}
+
+.quote {
+    font-style: italic;
+}
