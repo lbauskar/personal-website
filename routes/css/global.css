@@ -14,7 +14,7 @@ a {
     color: inherit;
 }
 
-/* CSS that corresponds to the HTML found in global.js */
+/* CSS that corresponds to the HTML found in navbar.js */
 
 .navbar {
     position: sticky; /*stay at top of screen if user scrolls down */
