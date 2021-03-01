@@ -58,7 +58,7 @@ h1 {
 .internal-link {
     transition: font-size 0.25s;
     font-size: 18pt;
-    color: black;
+    color: white;
     text-decoration: none;
     padding: 10px 10px;
 }
@@ -96,15 +96,21 @@ hr {
 
 
 .link-icon {
-    filter: brightness(0) saturate(100%); /*make visible pixels black*/
     transition: filter 0.25s;
     width: 3%;
     margin-left: 0.5%;
     margin-right: 0.5%;
 }
 
-.link-icon:hover { /*remove filters on hover*/
-    filter: none;
-    transition: filter 0.5s;
+#linkedin:hover {
+    filter: invert(21%) sepia(24%) saturate(6392%) hue-rotate(218deg) brightness(94%) contrast(101%);
+}
+
+#github:hover {
+    filter: invert(49%) sepia(90%) saturate(366%) hue-rotate(97deg) brightness(100%) contrast(90%);
+}
+
+#email:hover {
+    filter: invert(29%) sepia(22%) saturate(5684%) hue-rotate(340deg) brightness(93%) contrast(88%);
 }
 

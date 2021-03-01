@@ -1,3 +1,11 @@
+/**
+ * Function to be called when you click on a tab in service.html
+ * 
+ * 
+ * @param {String} pageID String HTML ID of the page you want to view
+ * @param {String} tabID String HTML ID of the tab you clicked on
+ * @param {String} color String representing what background color you want your page to have
+ */
 function openTab(pageID, tabID, color) {
     let tabPages = document.getElementsByClassName("tab-content");
     for (let page of tabPages) {

@@ -3,8 +3,8 @@ html {
 }
 
 body {
-    background: azure;
-    color: rgb(32, 15, 15);
+    background: #202228;
+    color: white;
     padding: 0;
     margin: 0;
 }
@@ -14,7 +14,7 @@ a {
     color: inherit;
 }
 
-/* CSS that corresponds to the HTML found in global.js */
+/* CSS that corresponds to the HTML found in navbar.js */
 
 .navbar {
     position: sticky; /*stay at top of screen if user scrolls down */
@@ -34,7 +34,7 @@ a {
 .navbar a { /* links aren't blue and underlined */
     transition: font-size 0.25s;
     font-size: 100%;
-    color: black;
+    color: white;
     padding: 10px 10px;
 }
 
