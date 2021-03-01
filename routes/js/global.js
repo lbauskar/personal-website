@@ -8,7 +8,7 @@ let GlobalHTML = { //adds HTML that should go on every webpage
             <a href="/" id="nav-home"> Home </a>
             <a href="/about" id="nav-about"> About Me </a>
             <a href="/portfolio" id="nav-portfolio"> Portfolio </a>
-            <a href="/qualifications" id="nav-qualifications"> Qualifications </a>
+            <a href="/resume" id="nav-resume"> resume </a>
             <a href="/service" id="nav-service"> Service </a>
         </div>`;
 

@@ -38,8 +38,8 @@ router.get("/portfolio", (req, res) => {
     res.render("portfolio.html");
 });
 
-router.get("/qualifications", (req, res) => {
-    res.render("qualifications.html");
+router.get("/resume", (req, res) => {
+    res.sendFile(path.join(__dirname, "src", "resume.pdf"));
 });
 
 router.get("/service", (req, res) => {
