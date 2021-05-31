@@ -11,6 +11,7 @@
 		<link rel="stylesheet" type="text/css" href="/css/index.css"/>
 	</head>
 	<body>
+	<div class="container" style="min-width: 100%; padding: 0;">
 		<div class="container-fluid text-center pt-2 section" id="home">
 			<div class="title">
 				<h1>
@@ -20,40 +21,63 @@
 			</div>
 
 			<br/>
-			<a class="btn btn-outline-light" onclick="scrollToID('about');" id="see-more-btn">
+			<a class="btn btn-outline-light" onclick="scrollToID('about-location');" id="see-more-btn">
 				<span class="h3"> See more </span> 
 			</a>
+		</div>
 
-			<div class="internal-links-div pb-3">
-				<a class="internal-links-placeholder"> ;; </a>
-				<a href="/about" class="internal-link"> About </a>
-				<a href="/portfolio" class="internal-link"> Portfolio </a>
-				<a href="/resume" class="internal-link"> Resume </a>
-				<a href="/experience" class="internal-link"> Experience </a>
-				<a class="internal-links-placeholder"> ;; </a>
+		<div id="about-location"></div> <!-- where about page and unstickied navbar is located vertically -->
+
+		<nav class="navbar sticky-top navbar-expand-sm navbar-dark bg-dark" id="navbar">
+			<div class="container h5">
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+			
+				<div class="collapse navbar-collapse" id="navbarColor01">
+					<ul class="navbar-nav mr-auto">
+						<li class="nav-item active" id="home-nav-item">
+							<a class="nav-link" onclick="scrollToID('home');"> Home </a>
+						</li>
+						<li class="nav-item" id="about-nav-item">
+							<a class="nav-link" onclick="scrollToID('about-location');">About</a>
+						</li>
+						<li class="nav-item" id="projects-nav-item">
+							<a class="nav-link" onclick="scrollToID('projects');"> Projects </a>
+						</li>
+					</ul>
+				</div>
 			</div>
+		</nav>
 
-			<div class="px-md external-links">
-				<a href="mailto:labauskar@gmail.com"> 
-					<img src="/img/email.png" class="link-icon img-fluid" id="email" alt="email"/>
-				</a>
-				<a href="https://www.github.com/lbauskar">
-					<img src="/img/github.png" class="link-icon img-fluid" id="github" alt="GitHub"/>
-				</a>
-				<a href="https://www.linkedin.com/in/lalit-bauskar/">
-					<img src="/img/linkedin.png" class="link-icon img-fluid" id="linkedin" alt="LinkedIn"/>
-				</a>
+		<div class="container section" id="about">
+			<br/>
+			<h1 class="text-center"> About </h1>
+			<br/>
+			<div class="container">
+				<div class="row">
+					<div class="col-md text-center">
+						<img src="img/me.jpg" class="me" alt="me staring into the sun" loading="lazy">
+						<h3> Nice graph, but who are you?</h3>
+						<p> adnwoadnawopdmwaopid awd wadwadaw dmawoid awdawd  dwaaaa dawmduiawdawudn idna diawndawio dnawiudon waodina wdinaw diawun dioaw  </p>
+					</div>
+					<div class="col-md">
+						skills
+					</div>
+				</div>
 			</div>
 		</div>
 
-		<div class="container section" id="about">
-			uwu
+		<div class="container section" id="projects">
+			hehe
 		</div>
 
 		<script src="/vendor/jquery/jquery.min.js"></script>
 		<script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 		<script src="/vendor/three/three.min.js"></script>
 		<script src="/vendor/vanta/vanta.net.min.js"></script>
+		<script src="/vendor/jquery/jquery.appear.js"></script>
 		<script src="/js/index.js"></script>
+	</div>
 	</body>
 </html>

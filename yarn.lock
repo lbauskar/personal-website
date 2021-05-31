@@ -288,6 +288,11 @@ jake@^10.6.1:
     filelist "^1.0.1"
     minimatch "^3.0.4"
 
+jquery-appear-original@^0.6.2:
+  version "0.6.2"
+  resolved "https://registry.yarnpkg.com/jquery-appear-original/-/jquery-appear-original-0.6.2.tgz#a1341a727e15348639ea5fe2fe4ec4737a170c05"
+  integrity sha512-PxvsyDld5SthfNwL19vh4aga/2hYCK/zH90l1/aYxFAD6IyG53Y1kHt5hjaT1Ch3u6ztdHWx93olsjNXSN0gEw==
+
 media-typer@0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/media-typer/-/media-typer-0.3.0.tgz#8710d7af0aa626f8fffa1ce00168545263255748"
