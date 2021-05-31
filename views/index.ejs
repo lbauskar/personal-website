@@ -5,16 +5,24 @@
 		<meta charset="utf-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald|Quattrocento"/>
 		<link rel="stylesheet" type="text/css" href="/vendor/bootstrap/css/bootstrap.min.css"/>
 		<link rel="stylesheet" type="text/css" href="/css/global.css"/>
 		<link rel="stylesheet" type="text/css" href="/css/index.css"/>
 	</head>
 	<body>
-		<div class="jumbotron text-center pt-2" id="background">
-			<h1 id="first-heading">Howdy!</h1>
-			<h1 id="second-heading"> I'm Lalit </h1>
+		<div class="container-fluid text-center pt-2 section" id="home">
+			<div class="title">
+				<h1>
+					Howdy! I'm <span id="name-span"> <!-- Lalit Bauskar --> </span> 
+					<br/> – a CS senior at Texas A&M.
+				</h1>
+			</div>
 
-			<img src="/img/lalit-profile.jpg" alt="" class="rounded-circle img-fluid pt-4" id="profile"/>
+			<br/>
+			<a class="btn btn-outline-light" onclick="scrollToID('about');" id="see-more-btn">
+				<span class="h3"> See more </span> 
+			</a>
 
 			<div class="internal-links-div pb-3">
 				<a class="internal-links-placeholder"> ;; </a>
@@ -38,23 +46,14 @@
 			</div>
 		</div>
 
+		<div class="container section" id="about">
+			uwu
+		</div>
+
 		<script src="/vendor/jquery/jquery.min.js"></script>
 		<script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 		<script src="/vendor/three/three.min.js"></script>
 		<script src="/vendor/vanta/vanta.net.min.js"></script>
-		<script>
-			VANTA.NET({
-				el: "#background",
-				mouseControls: true,
-				touchControls: true,
-				gyroControls: false,
-				minHeight: 200,
-				minWidth: 200,
-				scale: 1,
-				scaleMobile: 1,
-				color: 0x4682b4,
-				backgroundColor: 0x202228
-			})
-		</script>
+		<script src="/js/index.js"></script>
 	</body>
 </html>
