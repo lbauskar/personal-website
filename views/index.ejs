@@ -10,7 +10,7 @@
 		<link rel="stylesheet" type="text/css" href="/css/index.css"/>
 	</head>
 	<body>
-		<div class="jumbotron text-center pt-2">
+		<div class="jumbotron text-center pt-2" id="background">
 			<h1 id="first-heading">Howdy!</h1>
 			<h1 id="second-heading"> I'm Lalit </h1>
 
@@ -40,5 +40,21 @@
 
 		<script src="/vendor/jquery/jquery.min.js"></script>
 		<script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+		<script src="/vendor/three/three.min.js"></script>
+		<script src="/vendor/vanta/vanta.net.min.js"></script>
+		<script>
+			VANTA.NET({
+				el: "#background",
+				mouseControls: true,
+				touchControls: true,
+				gyroControls: false,
+				minHeight: 200,
+				minWidth: 200,
+				scale: 1,
+				scaleMobile: 1,
+				color: 0x4682b4,
+				backgroundColor: 0x202228
+			})
+		</script>
 	</body>
 </html>
