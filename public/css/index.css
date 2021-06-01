@@ -82,3 +82,9 @@ h1 {
     min-width: 100%;
 }
 
+#projects-wrapper {
+    background-color: rgb(216, 224, 241);
+    color: black;
+    min-width: 100%;
+}
+
