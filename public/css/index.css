@@ -38,3 +38,32 @@ h1 {
     cursor: pointer;
 }
 
+.me {
+    max-width: 75vw;
+    max-height: 30vh;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.stars {
+    background-color: red;
+    border-color: black;
+}
+
+.stars svg {
+}
+
+
+.stars-label {
+    background-color: blue;
+    text-align: right;
+    vertical-align: bottom;
+}
+
+#about-wrapper {
+    background-color: rgb(231, 235, 243);
+    color: black;
+    min-width: 100%;
+}

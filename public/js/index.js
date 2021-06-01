@@ -1,3 +1,5 @@
+
+
 //load graph in background
 VANTA.NET({
     el: "#home",
@@ -48,3 +50,43 @@ $(function() {
     });
     
 });
+
+lottie.setQuality('low');
+//load star fill-in animation
+const stars = [];
+for (let element of document.getElementsByClassName('stars')) {
+
+    let file;
+    if (element.classList.contains('5-star')) {
+        file = 'src/5stars.json';
+    } else if (element.classList.contains('4-star')) {
+        file = 'src/4stars.json';
+    } else if (element.classList.contains('3-star')) {
+        file = 'src/3stars.json';
+    }
+
+    const animation = lottie.loadAnimation({
+        container: element,
+        path: file,
+        renderer: 'svg',
+        loop: false,
+        autoplay: false,
+        rendererSettings: {
+            progressiveLoad: true
+        }
+    });
+    animation.setSpeed(2);
+    stars.push(animation);
+}
+
+//have stars sequentially fill in when about section is in view
+$('#about').appear();
+$('#about').on('appear', () => {
+    const msDelay = 40;
+
+    for (let i = 0; i < stars.length; ++i) {
+        setTimeout(() => {stars[i].play()}, msDelay * (i + 1));
+    }
+})
+
+
