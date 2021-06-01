@@ -47,19 +47,33 @@ h1 {
     -o-border-radius: 50%;
 }
 
-.stars {
-    background-color: red;
-    border-color: black;
+#cursor {
+    color: rgb(170, 77, 224);
+    animation-name: blink;
+    animation-iteration-count: 7;
+    animation-duration: 300ms;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease;
+    /*animation: blink 4s linear 0 26 alternate forwards; */
 }
 
-.stars svg {
-}
+@keyframes blink {
+    from {
+        opacity: 1;
+    }
 
+    to {
+        opacity: 0;
+    }
+}
 
 .stars-label {
-    background-color: blue;
-    text-align: right;
-    vertical-align: bottom;
+    display: flex;
+    font-size: 25pt;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 0;
 }
 
 #about-wrapper {
@@ -67,3 +81,4 @@ h1 {
     color: black;
     min-width: 100%;
 }
+

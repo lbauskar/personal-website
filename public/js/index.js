@@ -35,21 +35,7 @@ function scrollToID(id) {
     });
 }
 
-$(function() {
 
-    //make navbar highlight whatever section you're on
-    window.addEventListener('scroll', () => {
-        $('.nav-item').removeClass('active');
-        if ($('#projects').is(':appeared')) {
-            $('#projects-nav-item').addClass('active');
-        } else if ($('#about').is(':appeared')) {
-            $('#about-nav-item').addClass('active');
-        } else if ($('#home').is(':appeared')) {
-            $('#home-nav-item').addClass('active');
-        }
-    });
-    
-});
 
 lottie.setQuality('low');
 //load star fill-in animation
@@ -79,14 +65,39 @@ for (let element of document.getElementsByClassName('stars')) {
     stars.push(animation);
 }
 
-//have stars sequentially fill in when about section is in view
-$('#about').appear();
-$('#about').on('appear', () => {
-    const msDelay = 40;
+//jquery stuff
+$(function() {
 
-    for (let i = 0; i < stars.length; ++i) {
-        setTimeout(() => {stars[i].play()}, msDelay * (i + 1));
-    }
-})
+    //make navbar highlight whatever section you're on
+    window.addEventListener('scroll', () => {
+        $('.nav-item').removeClass('active');
+        if ($('#projects').is(':appeared')) {
+            $('#projects-nav-item').addClass('active');
+        } else if ($('#about').is(':appeared')) {
+            $('#about-nav-item').addClass('active');
+        } else if ($('#home').is(':appeared')) {
+            $('#home-nav-item').addClass('active');
+        }
+    });
+
+    console.log($('about').is(':appeared'));
+
+    //have stars sequentially fill in when about section is in view
+    $('#about').appear();
+    $('#about').on('appear', () => {
+        const msDelay = 100;
+
+        for (let i = 0; i < stars.length; ++i) {
+            setTimeout(() => {stars[i].play()}, msDelay * (i + 1));
+        }
+
+        $('.stars svg').attr('viewBox', '20 30 160 40');
+        $('.stars svg').attr('width', '160');
+        $('.stars svg').attr('height', '40');
+    });
+
+    
+});
+
 
 
