@@ -1,3 +1,11 @@
+html {
+    font-family: Lato, sans-serif;
+}
+
+.btn {
+    border-radius: 0;
+}
+
 #name-span {
     color: rgb(170, 77, 224)
 }
@@ -98,10 +106,6 @@ h1 {
     justify-content: center;
 }
 
-.gallery img {
-    display: block;
-}
-
 .gallery-item {
     position: relative;
     display: inline-flex;
@@ -110,7 +114,6 @@ h1 {
 
 .gallery-item .text {
     text-align: center;
-    font-family: Quattrocento, serif;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -147,4 +150,51 @@ h1 {
     .stars-label {
         font-size: 20pt;
     }
+}
+
+.modal-fade {
+    transform: scale(0.7);
+    opacity: 0;
+    transition: all 0.4s ease;
+    transform-origin: center;
+}
+
+.modal-fade.show {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.modal-fade.hide {
+    opacity: 0;
+    transform: scale(0.7);
+}
+
+.project-modal {
+    max-width: 750px;
+    height: 750px;
+}
+
+.project-modal .modal-content {
+    box-shadow: 0 0 10px rgb(0, 0, 0, 0.4);
+    border-radius: 0;
+}
+
+
+.modal-content h2 {
+    font-weight: bold;
+}
+
+.modal-content h3 {
+    color: darkgray;
+    font-size: larger;
+}
+
+.modal-content hr {
+    width: 30%;
+    color: slategray;
+    margin-left: 0;
+}
+
+.modal-content .text {
+    padding-left: 10px;
 }

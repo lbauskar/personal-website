@@ -5,8 +5,8 @@
 		<meta charset="utf-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!-- icons -->
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald|Quattrocento"/> <!-- fonts -->
-		<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"/> <!-- bootstrap -->
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald|Quattrocento|Lato"/> 
+		<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"/>
 		<link rel="stylesheet" type="text/css" href="/css/global.css"/>
 		<link rel="stylesheet" type="text/css" href="/css/index.css"/>
 	</head>
@@ -67,7 +67,7 @@
 							I love creatively solving problems and taking a hands-on approach to learning new tools and skills. I grew up on the border town
 							of Brownsville, TX, and I'm passionate about making technical fields more accessible to everyone. My expected graduation date is May 2022.
 							<br/> <br/>
-							If you want a printable overview of things I've done, you can download my resume below. Otherwise, keep scrolling!
+							If you want a printable overview of things I've done, you can download my resume below.
 							<br/> <br/>
 							<a class="btn btn-outline-danger" style="font-size: larger; font-family: sans-serif;"  href="src/Resume.pdf">
 								<span class="fa fa-file"> </span> Resume
@@ -151,15 +151,17 @@
 			
 			<div class="container flex gallery">
 				<div class="gallery-item">
-					<img src="img/projects/groupme.jpg" alt="Phones using GroupMe"/>
+					<img src="img/projects/groupme.jpg" alt="Phones using GroupMe" loading="lazy"/>
 					<div class="text">
+						<br/> <br/>
 						<h4> GroupMe Bot </h4>
 						<p> Python </p>
+						<a class="btn btn-outline-dark" onclick="$('#groupme-modal').modal('show');"> Details </a>
 					</div>
 				</div>
 
 				<div class="gallery-item">
-					<img src="img/projects/kanban.jpg" alt="Woman using Kanban board"/>
+					<img src="img/projects/kanban.jpg" alt="Woman using Kanban board" loading="lazy"/>
 					<div class="text">
 						<h4> Kanban for VSCode </h4>
 						<p> JavaScript </p>
@@ -167,7 +169,7 @@
 				</div>
 
 				<div class="gallery-item">
-					<img src="img/projects/pathfinding.jpg" alt="Dashed line on map"/>
+					<img src="img/projects/pathfinding.jpg" alt="Dashed line on map" loading="lazy"/>
 					<div class="text">
 						<h4> Pathfinding Visualizer </h4>
 						<p> Java </p>
@@ -175,13 +177,32 @@
 				</div>
 
 				<div class="gallery-item">
-					<img src="img/projects/rotaract.jpg" alt="Volunteers distributing goods"/>
+					<img src="img/projects/rotaract.jpg" alt="Volunteers distributing goods" loading="lazy"/>
 					<div class="text">
 						<h4> Rotaract Event Tracker </h4>
 						<p> Ruby on Rails </p>
 					</div>
 				</div>
 			</div>
+
+			<div class="modal modal-fade" id="groupme-modal" tabindex="-1" role="dialog" aria-label="GroupMe Bot Modal" aria-hidden="true">
+				<div class="modal-dialog modal-dialog-centered project-modal" role="document">
+					<div class="modal-content">
+						<img src="img/projects/groupme.jpg"/>
+						<div class="text">
+							<h2> GroupMe Bot </h2>
+							<h3> Chatbot running on the cloud, written in Python </h3>
+							<hr>
+							<p> ddwad wad adwa dawd awd awD awd wadawd awd awd </p>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<i class="fa fa-times" aria-hidden="true"> </i>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<br/>
 		</div>
 		</div>
 
@@ -189,7 +210,7 @@
 			<div class="container section" id="experience">
 				<br/> <br/> </br/>
 				<h1> Experience </h1>
-			
+				
 			</div>
 			</div>
 
