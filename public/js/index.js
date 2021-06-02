@@ -88,8 +88,8 @@ $(function() {
             setTimeout(() => {stars[i].play()}, msDelay * (i + 1));
         }
 
-        $('.stars svg').attr('viewBox', '20 30 160 40');
-        $('.stars svg').attr('width', '160');
+        $('.stars svg').attr('viewBox', '40 30 160 40');
+        $('.stars svg').attr('width', '90');
         $('.stars svg').attr('height', '40');
     });
 

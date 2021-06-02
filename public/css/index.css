@@ -70,10 +70,20 @@ h1 {
 
 .stars-label {
     display: flex;
-    font-size: 25pt;
+    font-size: 15pt;
     align-items: center;
     justify-content: flex-end;
     padding-right: 0;
+}
+
+.stars {
+    display: inline-flex;
+    float: left;
+    padding-left: 0;
+}
+
+.stars svg {
+    height: 25pt !important;
 }
 
 #about-wrapper {
@@ -97,3 +107,12 @@ h1 {
     max-width: 40vh;
 }
 
+@media (min-width: 1200px) {
+    .stars svg {
+        height: 32pt !important;
+    }
+
+    .stars-label {
+        font-size: 20pt;
+    }
+}
