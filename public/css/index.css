@@ -88,3 +88,12 @@ h1 {
     min-width: 100%;
 }
 
+.gallery {
+    text-align: center;
+}
+
+.gallery img {
+    display: inline-flex;
+    max-width: 40vh;
+}
+

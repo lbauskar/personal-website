@@ -57,9 +57,6 @@ for (let element of document.getElementsByClassName('stars')) {
         renderer: 'svg',
         loop: false,
         autoplay: false,
-        rendererSettings: {
-            progressiveLoad: true
-        }
     });
     animation.setSpeed(2);
     stars.push(animation);
@@ -81,8 +78,6 @@ $(function() {
             $('#home-nav-item').addClass('active');
         }
     });
-
-    console.log($('about').is(':appeared'));
 
     //have stars sequentially fill in when about section is in view
     $('#about').appear();
