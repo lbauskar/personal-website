@@ -58,10 +58,10 @@
 			<br/>
 			<div class="container">
 				<div class="row">
-					<div class="col-md text-center" style="font-family: 'Quattrocento', serif;">
+					<div class="col-md text-center">
 						<img src="img/me-25.jpg" class="me" alt="Picture of me staring into the sun" loading="lazy">
 						<br/> <br/>
-						<h3 class="font-weight-bold font-italic"> So who are you?</h3>
+						<h2> So who are you?</h2>
 						<p> 
 							I'm an undergraduate at Texas A&M University where I'm getting a Bachelors in Computer Science with a minor in Mathematics.
 							I love creatively solving problems and taking a hands-on approach to learning new tools and skills. I grew up on the border town
@@ -87,7 +87,7 @@
 
 							<div class="row">
 								<div class="col-5 stars-label"> JavaScript </div>
-								<div class="col-7 stars 3-star" aria-label="3 out of 5 stars"> </div>
+								<div class="col-7 stars 4-star" aria-label="4 out of 5 stars"> </div>
 							</div>
 
 							<div class="row">
@@ -153,7 +153,6 @@
 				<div class="gallery-item">
 					<img src="img/projects/groupme.jpg" alt="Phones using GroupMe" loading="lazy"/>
 					<div class="text">
-						<br/> <br/>
 						<h4> GroupMe Bot </h4>
 						<p> Python </p>
 						<a class="btn btn-outline-dark" onclick="$('#groupme-modal').modal('show');"> Details </a>
@@ -163,8 +162,9 @@
 				<div class="gallery-item">
 					<img src="img/projects/kanban.jpg" alt="Woman using Kanban board" loading="lazy"/>
 					<div class="text">
-						<h4> Kanban for VSCode </h4>
-						<p> JavaScript </p>
+						<h4> Kanban for VS Code </h4>
+						<p> JavaScript, TypeScript </p>
+						<a class="btn btn-outline-dark" onclick="$('#kanban-modal').modal('show');"> Details </a>
 					</div>
 				</div>
 
@@ -173,6 +173,7 @@
 					<div class="text">
 						<h4> Pathfinding Visualizer </h4>
 						<p> Java </p>
+						<a class="btn btn-outline-dark" onclick="$('#pathfinding-modal').modal('show');"> Details </a>
 					</div>
 				</div>
 
@@ -180,7 +181,17 @@
 					<img src="img/projects/rotaract.jpg" alt="Volunteers distributing goods" loading="lazy"/>
 					<div class="text">
 						<h4> Rotaract Event Tracker </h4>
-						<p> Ruby on Rails </p>
+						<p> Ruby on Rails, PostgreSQL </p>
+						<a class="btn btn-outline-dark" onclick="$('#rotaract-modal').modal('show');"> Details </a>
+					</div>
+				</div>
+
+				<div class="gallery-item">
+					<img src="img/projects/soar.jpg" alt="Flying quadcopter" loading="lazy"/>
+					<div class="text">
+						<h4> Project SOAR </h4>
+						<p> C++ </p>
+						<a class="btn btn-outline-dark" onclick="$('#soar-modal').modal('show');"> Details </a>
 					</div>
 				</div>
 			</div>
@@ -188,15 +199,116 @@
 			<div class="modal modal-fade" id="groupme-modal" tabindex="-1" role="dialog" aria-label="GroupMe Bot Modal" aria-hidden="true">
 				<div class="modal-dialog modal-dialog-centered project-modal" role="document">
 					<div class="modal-content">
-						<img src="img/projects/groupme.jpg"/>
+						<img src="img/projects/groupme.jpg" alt="Phones using GroupMe"/>
 						<div class="text">
 							<h2> GroupMe Bot </h2>
-							<h3> Chatbot running on the cloud, written in Python </h3>
+							<h3> Chat bot that helps facilitate communication in large group chats </h3>
 							<hr>
-							<p> ddwad wad adwa dawd awd awD awd wadawd awd awd </p>
-							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-								<i class="fa fa-times" aria-hidden="true"> </i>
-							</button>
+							<ul> 
+								<li> Uses Python 3 and Flask; deployed on Heroku </li>
+								<li> Automated greetings for new users and macros for regular users </li>
+								<li> "@everyone" to notify all members of a group chat </li>
+							</ul>
+							<a class="btn btn-outline-success" href="https://github.com/lbauskar/groupme-bot" target="_blank">
+								<i class="fa fa-github"> </i>
+								Repository
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="modal modal-fade" id="kanban-modal" tabindex="-1" role="dialog" aria-label="Kanban Board Modal" aria-hidden="true">
+				<div class="modal-dialog modal-dialog-centered project-modal" role="document">
+					<div class="modal-content">
+						<img src="img/projects/kanban.jpg" alt="Woman using Kanban Board"/>
+						<div class="text">
+							<h2> Kanban for Visual Studio Code </h2>
+							<h3> Extension used to visually organize tasks </h3>
+							<hr>
+							<ul>
+								<li> Written in HTML, CSS, TypeScript, and JavaScript </li>
+								<li> Automatically creates a new board for each project </li>
+								<li> "In the whole of VS Code extensions yours was the simplest to use and most flexible." </li>
+							</ul>
+							<a class="btn btn-outline-success" href="https://github.com/lbauskar/kanban" target="_blank">
+								<i class="fa fa-github"> </i>
+								Repository
+							</a>
+							<a class="btn btn-outline-primary" href="https://marketplace.visualstudio.com/items?itemName=lbauskar.kanban" target="_blank">
+								<i class="fa fa-download"> </i>
+								Download
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="modal modal-fade" id="pathfinding-modal" tabindex="-1" role="dialog" aria-label="Kanban Board Modal" aria-hidden="true">
+				<div class="modal-dialog modal-dialog-centered project-modal" role="document">
+					<div class="modal-content">
+						<img src="img/projects/pathfinding.jpg" alt="Woman using Kanban Board"/>
+						<div class="text">
+							<h2> Pathfinding Visualizer </h2>
+							<h3> GUI program that shows how pathfinding algorithms work </h3>
+							<hr>
+							<ul> 
+								<li> Java application using Swing for GUI elements </li>
+								<li> Gradle project with 100% test coverage and documentation </li>
+								<li> Draw obstacles to navigate around or auto-generate a maze </li>
+							</ul>
+							<a class="btn btn-outline-success" href="https://github.com/lbauskar/java-pathfinding-visualizer" target="_blank">
+								<i class="fa fa-github"> </i>
+								Repository
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="modal modal-fade" id="rotaract-modal" tabindex="-1" role="dialog" aria-label="Kanban Board Modal" aria-hidden="true">
+				<div class="modal-dialog modal-dialog-centered project-modal" role="document">
+					<div class="modal-content">
+						<img src="img/projects/rotaract.jpg" alt="Woman using Kanban Board"/>
+						<div class="text">
+							<h2> Aggie Rotaract Event Tracker </h2>
+							<h3> Web app for members to schedule and attend charitable events </h3>
+							<hr>
+							<ul>
+								<li> Ruby on Rails website using PostgreSQL for the backend </li>
+								<li> Integrated with school emails, no additional signup necessary </li>
+								<li> CI/CD implemented with GitHub actions and Heroku pipeline </li>
+							</ul>
+							<a class="btn btn-outline-danger" style="pointer-events: none;">
+								<i class="fa fa-lock"> </i>
+								Private Repository
+							</a>
+							<a class="btn btn-outline-primary" href="http://aggie-rotaract.herokuapp.com" target="_blank">
+								<i class="fa fa-link"> </i>
+								Visit
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="modal modal-fade" id="soar-modal" tabindex="-1" role="dialog" aria-label="Kanban Board Modal" aria-hidden="true">
+				<div class="modal-dialog modal-dialog-centered project-modal" role="document">
+					<div class="modal-content">
+						<img src="img/projects/soar.jpg" alt="Woman using Kanban Board"/>
+						<div class="text">
+							<h2> Project SOAR </h2>
+							<h3> Quadcopter controlled by tilting motors </h3>
+							<hr>
+							<ul>
+								<li> Substantially edited <a href="https://github.com/PX4/PX4-Autopilot" target="_blank">Pixhawk firmware</a> to support motor tilting</li>
+								<li> Personally added code to support multiple control options, making the drone easier to pilot </li>
+								<li> Worked as a team with ~10 programmers; coordinated with piloting and electronics teams </li>
+							</ul>
+							<a class="btn btn-outline-danger" style="pointer-events: none;">
+								<i class="fa fa-lock"> </i>
+								Private Repository
+							</a>
 						</div>
 					</div>
 				</div>

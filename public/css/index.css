@@ -113,6 +113,7 @@ h1 {
 }
 
 .gallery-item .text {
+    padding-top: 20%;
     text-align: center;
     position: absolute;
     width: 100%;
@@ -127,13 +128,8 @@ h1 {
     opacity: 1;
 }
 
-.gallery-item .text h4 {
-    font-weight: bold;
-}
-
 .gallery-item .text p {
     color:blueviolet;
-    font-style: italic;
 }
 
 .gallery img {
@@ -185,7 +181,7 @@ h1 {
 }
 
 .modal-content h3 {
-    color: darkgray;
+    color: rgb(122, 122, 122);
     font-size: larger;
 }
 
@@ -196,5 +192,14 @@ h1 {
 }
 
 .modal-content .text {
-    padding-left: 10px;
+    padding: 10px;
+}
+
+.project-modal ul {
+    list-style-type: none;
+    padding-left: 15px;
+}
+
+.project-modal ul li:before {
+    content: "-⁠ ";
 }
