@@ -80,8 +80,8 @@ $(function() {
     });
 
     //have stars sequentially fill in when about section is in view
-    $('#about').appear();
-    $('#about').on('appear', () => {
+    $('#skill-stars').appear();
+    $('#skill-stars').on('appear', () => {
         const msDelay = 100;
 
         for (let i = 0; i < stars.length; ++i) {

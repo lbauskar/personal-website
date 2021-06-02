@@ -1,9 +1,3 @@
-/* CSS unique to index.html */
-
-#nav-home { /*make navbar link to current page bold */
-    font-weight: bold;
-}
-
 #name-span {
     color: rgb(170, 77, 224)
 }
@@ -31,7 +25,7 @@ h1 {
 }
 
 .section {
-    min-height: 100vh;
+    min-height: 101vh;
 }
 
 .nav-link:hover {
@@ -99,13 +93,51 @@ h1 {
 }
 
 .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.gallery img {
+    display: block;
+}
+
+.gallery-item {
+    position: relative;
+    display: inline-flex;
+    max-width: 40vh;
+}
+
+.gallery-item .text {
     text-align: center;
+    font-family: Quattrocento, serif;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    opacity: 0;
+    background-color: rgb(216, 224, 241);
+    transition: .5s ease;
+}
+
+.gallery-item .text:hover {
+    opacity: 1;
+}
+
+.gallery-item .text h4 {
+    font-weight: bold;
+}
+
+.gallery-item .text p {
+    color:blueviolet;
+    font-style: italic;
 }
 
 .gallery img {
     display: inline-flex;
     max-width: 40vh;
 }
+
 
 @media (min-width: 1200px) {
     .stars svg {

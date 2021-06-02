@@ -21,12 +21,10 @@
 			</div>
 
 			<br/>
-			<a class="btn btn-outline-light" onclick="scrollToID('about-location');" id="see-more-btn">
+			<a class="btn btn-outline-light" onclick="scrollToID('about');" id="see-more-btn">
 				<span class="h3"> See more </span> 
 			</a>
 		</div>
-
-		<div id="about-location"></div> <!-- where about page and unstickied navbar is located vertically -->
 
 		<nav class="navbar sticky-top navbar-expand-sm navbar-dark bg-dark" id="navbar">
 			<div class="container h5">
@@ -40,7 +38,7 @@
 							<a class="nav-link" onclick="scrollToID('home');"> Home </a>
 						</li>
 						<li class="nav-item" id="about-nav-item">
-							<a class="nav-link" onclick="scrollToID('about-location');">About</a>
+							<a class="nav-link" onclick="scrollToID('about');">About</a>
 						</li>
 						<li class="nav-item" id="projects-nav-item">
 							<a class="nav-link" onclick="scrollToID('projects');"> Projects </a>
@@ -55,7 +53,7 @@
 
 		<div class="container" id="about-wrapper">
 		<div class="container section" id="about">
-			<br/>
+			<br/> <br/> <br/>
 			<h1 class="text-center"> About </h1>
 			<br/>
 			<div class="container">
@@ -77,7 +75,7 @@
 						</p>
 					</div>
 					<div class="col-md" style="align-self: center;">
-						<div class="container">
+						<div class="container" id="skill-stars">
 							<div class="row">
 								<div class="col-5 stars-label"> C++ </div>
 								<div class="col-7 stars 5-star" aria-label="5 out of 5 stars"> </div>
@@ -149,12 +147,40 @@
 		<div class="container section" id="projects">
 			<br/> <br/> </br/>
 			<h1> Projects </h1>
+			<br/>
 			
 			<div class="container flex gallery">
-				<img src="img/projects/groupme.jpg"/>
-				<img src="img/projects/kanban.jpg"/>
-				<img src="img/projects/pathfinding.jpg"/>
-				<img src="img/projects/rotaract.jpg"/>
+				<div class="gallery-item">
+					<img src="img/projects/groupme.jpg" alt="Phones using GroupMe"/>
+					<div class="text">
+						<h4> GroupMe Bot </h4>
+						<p> Python </p>
+					</div>
+				</div>
+
+				<div class="gallery-item">
+					<img src="img/projects/kanban.jpg" alt="Woman using Kanban board"/>
+					<div class="text">
+						<h4> Kanban for VSCode </h4>
+						<p> JavaScript </p>
+					</div>
+				</div>
+
+				<div class="gallery-item">
+					<img src="img/projects/pathfinding.jpg" alt="Dashed line on map"/>
+					<div class="text">
+						<h4> Pathfinding Visualizer </h4>
+						<p> Java </p>
+					</div>
+				</div>
+
+				<div class="gallery-item">
+					<img src="img/projects/rotaract.jpg" alt="Volunteers distributing goods"/>
+					<div class="text">
+						<h4> Rotaract Event Tracker </h4>
+						<p> Ruby on Rails </p>
+					</div>
+				</div>
 			</div>
 		</div>
 		</div>
