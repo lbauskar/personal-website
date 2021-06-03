@@ -214,3 +214,12 @@ h1 {
 .project-modal ul li:before {
     content: "-⁠ ";
 }
+
+#contact-buttons i {
+    font-size: 25pt;
+}
+
+#contact {
+    min-height: 25vh;
+    text-align: center;
+}

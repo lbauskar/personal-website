@@ -68,7 +68,9 @@ $(function() {
     //make navbar highlight whatever section you're on
     window.addEventListener('scroll', () => {
         $('.nav-item').removeClass('active');
-        if ($('#experience').is(':appeared')) {
+        if ($('#contact').is(':appeared')) {
+            $('#contact-nav-item').addClass('active');
+        } else if ($('#experience').is(':appeared')) {
             $('#experience-nav-item').addClass('active');
         } else if ($('#projects').is(':appeared')) {
             $('#projects-nav-item').addClass('active');
