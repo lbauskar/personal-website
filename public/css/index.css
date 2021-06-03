@@ -7,7 +7,7 @@ html {
 }
 
 #name-span {
-    color: rgb(170, 77, 224)
+    color: rgb(170, 77, 224);
 }
 
 #see-more-btn {
@@ -92,7 +92,7 @@ h1 {
     height: 25pt !important;
 }
 
-#about-wrapper {
+#about-wrapper, #experience-wrapper {
     background-color: rgb(231, 235, 243);
     color: black;
     min-width: 100%;
@@ -124,8 +124,15 @@ h1 {
     height: 100%;
     text-align: center;
     opacity: 0;
-    background-color: rgb(216, 224, 241);
     transition: .5s ease;
+}
+
+#projects .gallery-item .text {
+    background-color: rgb(216, 224, 241);
+}
+
+#experience .gallery-item .text {
+    background-color: rgb(231, 235, 243);
 }
 
 .gallery-item .text:hover {
@@ -136,9 +143,9 @@ h1 {
     color:blueviolet;
 }
 
-.gallery img {
+.gallery-item img {
     display: inline-flex;
-    max-width: 40vh;
+    width: 100%;
 }
 
 

@@ -5,10 +5,16 @@
 		<meta charset="utf-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!-- icons -->
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald|Quattrocento|Lato"/> 
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald|Lato"/> 
 		<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"/>
 		<link rel="stylesheet" type="text/css" href="/css/global.css"/>
 		<link rel="stylesheet" type="text/css" href="/css/index.css"/>
+
+		<!--favicon stuff-->
+		<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+		<link rel="manifest" href="favicon/site.webmanifest">
 	</head>
 	<body>
 	<div class="container" style="min-width: 100%; padding: 0;">
@@ -155,7 +161,7 @@
 					<div class="text">
 						<h4> GroupMe Bot </h4>
 						<p> Python </p>
-						<a class="btn btn-outline-dark" onclick="$('#groupme-modal').modal('show');"> Details </a>
+						<a class="btn btn-outline-dark" tabindex="0" onclick="$('#groupme-modal').modal('show');"> Details </a>
 					</div>
 				</div>
 
@@ -164,7 +170,7 @@
 					<div class="text">
 						<h4> Kanban for VS Code </h4>
 						<p> JavaScript, TypeScript </p>
-						<a class="btn btn-outline-dark" onclick="$('#kanban-modal').modal('show');"> Details </a>
+						<a class="btn btn-outline-dark" tabindex="0" onclick="$('#kanban-modal').modal('show');"> Details </a>
 					</div>
 				</div>
 
@@ -173,7 +179,7 @@
 					<div class="text">
 						<h4> Pathfinding Visualizer </h4>
 						<p> Java </p>
-						<a class="btn btn-outline-dark" onclick="$('#pathfinding-modal').modal('show');"> Details </a>
+						<a class="btn btn-outline-dark" tabindex="0" onclick="$('#pathfinding-modal').modal('show');"> Details </a>
 					</div>
 				</div>
 
@@ -182,7 +188,7 @@
 					<div class="text">
 						<h4> Rotaract Event Tracker </h4>
 						<p> Ruby on Rails, PostgreSQL </p>
-						<a class="btn btn-outline-dark" onclick="$('#rotaract-modal').modal('show');"> Details </a>
+						<a class="btn btn-outline-dark" tabindex="0" onclick="$('#rotaract-modal').modal('show');"> Details </a>
 					</div>
 				</div>
 
@@ -191,7 +197,7 @@
 					<div class="text">
 						<h4> Project SOAR </h4>
 						<p> C++ </p>
-						<a class="btn btn-outline-dark" onclick="$('#soar-modal').modal('show');"> Details </a>
+						<a class="btn btn-outline-dark" tabindex="0" onclick="$('#soar-modal').modal('show');"> Details </a>
 					</div>
 				</div>
 			</div>
@@ -229,7 +235,7 @@
 							<ul>
 								<li> Written in HTML, CSS, TypeScript, and JavaScript </li>
 								<li> Automatically creates a new board for each project </li>
-								<li> "In the whole of VS Code extensions yours was the simplest to use and most flexible." </li>
+								<li> <em> "In the whole of VS Code extensions, yours was the simplest to use and most flexible." </em> </li>
 							</ul>
 							<a class="btn btn-outline-success" href="https://github.com/lbauskar/kanban" target="_blank" rel="noreferrer">
 								<i class="fa fa-github"> </i>
@@ -322,7 +328,116 @@
 			<div class="container section" id="experience">
 				<br/> <br/> </br/>
 				<h1> Experience </h1>
-				
+				<br/>
+
+				<div class="container flex gallery">
+					<div class="gallery-item">
+						<img src="img/experience/ra.jpg" alt="Promotional Resident Advisor picture" loading="lazy"/>
+						<div class="text">
+							<h4> Resident Advisor </h4>
+							<p> Employment </p>
+							<a class="btn btn-outline-dark" tabindex="0" onclick="$('#ra-modal').modal('show');"> Details </a>
+						</div>
+					</div>
+	
+					<div class="gallery-item">
+						<img src="img/experience/sa.jpg" alt="Sophomore Advisor team after training" loading="lazy"/>
+						<div class="text">
+							<h4> Sophomore Advisor </h4>
+							<p> Employment </p>
+							<a class="btn btn-outline-dark" tabindex="0" onclick="$('#sa-modal').modal('show');"> Details </a>
+						</div>
+					</div>
+	
+					<div class="gallery-item">
+						<img src="img/experience/code.jpg" alt="Code on a laptop" loading="lazy"/>
+						<div class="text">
+							<h4> Texas A&M Competitive Programming </h4>
+							<p> Extracurricular Organization </p>
+							<a class="btn btn-outline-dark" tabindex="0" onclick="$('#icpc-modal').modal('show');"> Details </a>
+						</div>
+					</div>
+	
+					<div class="gallery-item">
+						<img src="img/experience/bonfire.jpg" alt="Students carrying a log out of the woods" loading="lazy"/>
+						<div class="text">
+							<h4> Student Bonfire </h4>
+							<p> Community Service </p>
+							<a class="btn btn-outline-dark" tabindex="0" onclick="$('#bonfire-modal').modal('show');"> Details </a>
+						</div>
+					</div>
+				</div>
+	
+				<div class="modal modal-fade" id="ra-modal" tabindex="-1" role="dialog" aria-label="GroupMe Bot Modal" aria-hidden="true">
+					<div class="modal-dialog modal-dialog-centered project-modal" role="document">
+						<div class="modal-content">
+							<img src="img/experience/ra.jpg" alt="Promotional Resident Advisor picture" loading="lazy"/>
+							<div class="text">
+								<h2> Resident Advisor </h2>
+								<h3> Texas A&M Dept. of Residence Life | 2020 - Present </h3>
+								<hr>
+								<ul> 
+									<li> Keep residents informed of policies and work on-call shifts to handle emergencies </li>
+									<li> Open and close the dorms, then inspect them throughout the year </li>
+									<li> Work with 11 other Resident Advisors to ensure a safe and welcoming community </li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+	
+				<div class="modal modal-fade" id="sa-modal" tabindex="-1" role="dialog" aria-label="Kanban Board Modal" aria-hidden="true">
+					<div class="modal-dialog modal-dialog-centered project-modal" role="document">
+						<div class="modal-content">
+							<img src="img/experience/sa.jpg" alt="Sophomore Advisor team after training" loading="lazy"/>
+							<div class="text">
+								<h2> Sophomore Advisor </h2>
+								<h3> Texas A&M University Honors | 2019 - 2020 </h3>
+								<hr>
+								<ul>
+									<li> Led weekly seminar meetings to help freshmen adjust to college life and promote personal growth </li>
+									<li> Planned and ran events for the Honors Housing Community </li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+	
+				<div class="modal modal-fade" id="icpc-modal" tabindex="-1" role="dialog" aria-label="Kanban Board Modal" aria-hidden="true">
+					<div class="modal-dialog modal-dialog-centered project-modal" role="document">
+						<div class="modal-content">
+							<img src="img/experience/code.jpg" alt="Code on a laptop" loading="lazy"/>
+							<div class="text">
+								<h2> Competitive Programmer </h2>
+								<h3> Texas A&M Competitive Programming Team | 2019 - 2021 </h3>
+								<hr>
+								<ul> 
+									<li> One of ten competitors selected from pool of ~100 through local competition, twice </li>
+									<li> Participated in the International Competitive Programming Competition </li>
+									<li> Primarily used C++ and Python 3 </li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+	
+				<div class="modal modal-fade" id="bonfire-modal" tabindex="-1" role="dialog" aria-label="Kanban Board Modal" aria-hidden="true">
+					<div class="modal-dialog modal-dialog-centered project-modal" role="document">
+						<div class="modal-content">
+							<img src="img/experience/bonfire.jpg" alt="Students carrying a log out of the woods" loading="lazy"/>
+							<div class="text">
+								<h2> Volunteer </h2>
+								<h3> Student Bonfire | 100+ Hours | 2018 - 2020 </h3>
+								<hr>
+								<ul>
+									<li> 501(c)(3) non-profit organization </li>
+									<li> Cleared land for local farmers to promote agricultural development in the Brazos Valley </li>
+									<li> Took part in a tradition that's over a century old </li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 			</div>
 
