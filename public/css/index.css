@@ -249,5 +249,15 @@ img {
     }
 }
 
+@media (max-width: 450px) {
+    .stars svg {
+        height: 20pt !important;
+    }
+
+    .stars-label {
+        font-size: 14pt !important;
+    }
+}
+
 
 
