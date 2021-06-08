@@ -27,10 +27,6 @@ a {
     color: inherit;
 }
 
-img {
-    object-fit: cover;
-}
-
 .section {
     min-height: 101vh;
 }
@@ -203,12 +199,12 @@ img {
     transform: scale(0.7);
 }
 
-.project-modal {
+.modal-dialog {
     max-width: 750px;
     height: 750px;
 }
 
-.project-modal .modal-content {
+.modal-content {
     box-shadow: 0 0 10px rgb(0, 0, 0, 0.4);
     border-radius: 0;
 }
@@ -233,12 +229,18 @@ img {
     padding: 10px;
 }
 
-.project-modal ul {
+.modal-content img {
+    width: 100%;
+    height: auto;
+    align-self: flex-start;
+}
+
+.modal-content ul {
     list-style-type: none;
     padding-left: 15px;
 }
 
-.project-modal ul li:before {
+.modal-content ul li:before {
     content: "-⁠ ";
 }
 
