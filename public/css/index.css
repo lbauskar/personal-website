@@ -179,6 +179,7 @@ img {
 
 #name-span {
     color: rgb(170, 77, 224);
+    display: inline-block;
 }
 
 
