@@ -168,6 +168,13 @@ img {
     content: "-⁠ ";
 }
 
+
+.close-modal {
+    color: rgb(122, 122, 122);
+    font-size: larger;
+}
+
+
 /* IDs */
 
 #name-span {
