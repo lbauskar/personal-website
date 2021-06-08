@@ -1,4 +1,4 @@
-/* Tags */
+/* Universal */
 
 html {
     font-family: Lato, sans-serif;
@@ -31,23 +31,67 @@ img {
     object-fit: cover;
 }
 
-/*Classes*/
-
 .section {
     min-height: 101vh;
-}
-
-.title {
-    margin-top: 40vh;
 }
 
 .btn {
     border-radius: 0;
 }
 
+/* Home */
+
+.title {
+    margin-top: 40vh;
+}
+
+#name-span {
+    color: rgb(170, 77, 224);
+    display: inline-block;
+}
+
+
+#cursor {
+    color: rgb(170, 77, 224);
+    animation-name: blink;
+    animation-iteration-count: 7;
+    animation-duration: 300ms;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease;
+}
+
+#see-more-btn {
+    color: white;
+    border-color:white;
+}
+
+#see-more-btn:hover, #see-more-btn:active, #see-more-btn:focus {
+    color: white;
+    background-color: rgb(170, 77, 224);
+    border-color: rgb(170, 77, 224);
+}
+
+@keyframes blink {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+
+
+
+/* Navbar */
+
 .nav-link:hover {
     cursor: pointer;
 }
+
+/* About */
 
 .me {
     max-width: 75vw;
@@ -75,6 +119,36 @@ img {
 .stars svg {
     height: 25pt !important;
 }
+
+#about-wrapper, #experience-wrapper {
+    background-color: rgb(231, 235, 243);
+    color: black;
+    min-width: 100%;
+}
+
+
+
+@media (min-width: 1200px) {
+    .stars svg {
+        height: 32pt !important;
+    }
+
+    .stars-label {
+        font-size: 20pt;
+    }
+}
+
+@media (max-width: 450px) {
+    .stars svg {
+        height: 20pt !important;
+    }
+
+    .stars-label {
+        font-size: 14pt !important;
+    }
+}
+
+/* Projects/Experience */
 
 .gallery {
     display: flex;
@@ -174,42 +248,6 @@ img {
     font-size: larger;
 }
 
-
-/* IDs */
-
-#name-span {
-    color: rgb(170, 77, 224);
-    display: inline-block;
-}
-
-
-#cursor {
-    color: rgb(170, 77, 224);
-    animation-name: blink;
-    animation-iteration-count: 7;
-    animation-duration: 300ms;
-    animation-direction: alternate;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease;
-}
-
-#see-more-btn {
-    color: white !important;
-    border-color:white !important;
-}
-
-#see-more-btn:hover, #see-more-btn:active, #see-more-btn:focus {
-    color: white !important;
-    background-color: rgb(170, 77, 224) !important;
-    border-color: rgb(170, 77, 224) !important;
-}
-
-#about-wrapper, #experience-wrapper {
-    background-color: rgb(231, 235, 243);
-    color: black;
-    min-width: 100%;
-}
-
 #projects-wrapper {
     background-color: rgb(216, 224, 241);
     color: black;
@@ -226,6 +264,8 @@ img {
     background-color: rgb(231, 235, 243);
 }
 
+/* Contact */
+
 #contact-buttons i {
     font-size: 25pt;
 }
@@ -235,37 +275,13 @@ img {
     text-align: center;
 }
 
-/* Misc. */
-
-@keyframes blink {
-    from {
-        opacity: 1;
-    }
-
-    to {
-        opacity: 0;
-    }
+#contact .btn {
+    color: rgb(70, 130, 180);
+    border-color: rgb(70, 130, 180);
 }
 
-@media (min-width: 1200px) {
-    .stars svg {
-        height: 32pt !important;
-    }
-
-    .stars-label {
-        font-size: 20pt;
-    }
+#contact .btn:hover, #contact .btn:active, #contact .btn:focus {
+    color: white;
+    background-color: rgb(70, 130, 180);
+    border-color: rgb(70, 130, 180);
 }
-
-@media (max-width: 450px) {
-    .stars svg {
-        height: 20pt !important;
-    }
-
-    .stars-label {
-        font-size: 14pt !important;
-    }
-}
-
-
-

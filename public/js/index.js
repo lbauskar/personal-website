@@ -2,7 +2,7 @@
 
 //load graph in background
 VANTA.NET({
-    el: "#home",
+    el: '#home',
     mouseControls: true,
     touchControls: true,
     gyroControls: false,
@@ -22,16 +22,16 @@ function typeWriter(element, text, i = 0) {
     }
 }
 
-typeWriter(document.getElementById("name-span"), "Lalit Bauskar");
+typeWriter(document.getElementById('name-span'), 'Lalit Bauskar');
 
 
 //scroll to element
 function scrollToID(id) {
     let elem = document.getElementById(id);
     elem.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-        inline: "nearest"
+        behavior: 'smooth',
+        block: 'start',
+        inline: 'nearest'
     });
 }
 
