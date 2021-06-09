@@ -37,8 +37,11 @@ a {
 
 /* Home */
 
-.title {
-    margin-top: 40vh;
+#home {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 #name-span {
