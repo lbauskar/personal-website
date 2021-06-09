@@ -95,6 +95,16 @@ $(function() {
         $('.stars svg').attr('height', '40');
     });
 
+    //have stuff on about section slide in from left of screen
+    $('#about').appear();
+    $('#about').on('appear', () => {
+        const msDelay = 150;
+        const elems = $('.far-left').toArray()
+        for (let i = 0; i < elems.length; ++i) {
+            setTimeout( () => {elems[i].classList.add('final-pos')}, msDelay * (i));
+        }
+    });
+
     
 });
 

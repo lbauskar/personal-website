@@ -89,6 +89,15 @@ a {
 
 /* About */
 
+.far-left {
+    transition: 0.5s;
+    transform: translateX(-100vh);
+}
+
+.final-pos {
+    transform: translateX(0) !important;
+}
+
 .me {
     max-width: 75vw;
     max-height: 30vh;
@@ -247,7 +256,6 @@ a {
 .modal-content .btn {
     margin-top: 10px;
 }
-
 
 .close-modal {
     color: rgb(122, 122, 122);
