@@ -318,6 +318,19 @@ a {
     border-color: rgb(70, 130, 180);
 }
 
+.blue-filter svg {
+    filter: invert(77%) sepia(69%) saturate(4658%) hue-rotate(182deg) brightness(77%) contrast(76%);
+}
+
+.white-filter svg {
+    filter: invert(100%) sepia(6%) saturate(0%) hue-rotate(24deg) brightness(107%) contrast(106%);
+}
+
+#contact svg {
+    height: 30pt !important;
+    width: auto !important;
+}
+
 /* misc */
 
 .final-pos { /*must be after all other transformative classes to work*/

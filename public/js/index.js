@@ -62,6 +62,34 @@ for (let element of document.getElementsByClassName('stars')) {
     stars.push(animation);
 }
 
+const linkedin = lottie.loadAnimation({
+    container: $('#linkedin-button')[0],
+    path: 'src/linkedin.json',
+    renderer: 'svg',
+    loop: true,
+    autoplay: false
+});
+
+const github = lottie.loadAnimation({
+    container: $('#github-button')[0],
+    path: 'src/github.json',
+    renderer: 'svg',
+    loop: true,
+    autoplay: false
+});
+github.setSpeed(1.5);
+
+
+const email = lottie.loadAnimation({
+    container: $('#email-button')[0],
+    path: 'src/email.json',
+    renderer: 'svg',
+    loop: true,
+    autoplay: false
+});
+email.setSpeed(1.5);
+
+
 //jquery stuff
 $(function() {
 
@@ -130,7 +158,42 @@ $(function() {
         }
     })
 
-    
+    //contact buttons play on hover
+    const linkedinButton = $('#linkedin-button')[0];
+    linkedinButton.addEventListener('mouseover', () => {
+        linkedin.play();
+        linkedinButton.classList.remove('blue-filter');
+        linkedinButton.classList.add('white-filter');
+    });
+    linkedinButton.addEventListener('mouseout', () => {
+        linkedin.stop();
+        linkedinButton.classList.remove('white-filter');
+        linkedinButton.classList.add('blue-filter');
+    });
+
+    const githubButton = $('#github-button')[0];
+    githubButton.addEventListener('mouseover', () => {
+        github.play();
+        githubButton.classList.remove('blue-filter');
+        githubButton.classList.add('white-filter');
+    });
+    githubButton.addEventListener('mouseout', () => {
+        github.stop();
+        githubButton.classList.remove('white-filter');
+        githubButton.classList.add('blue-filter');
+    });
+
+    const emailButton = $('#email-button')[0];
+    emailButton.addEventListener('mouseover', () => {
+        email.play();
+        emailButton.classList.remove('blue-filter');
+        emailButton.classList.add('white-filter');
+    });
+    emailButton.addEventListener('mouseout', () => {
+        email.stop();
+        emailButton.classList.remove('white-filter');
+        emailButton.classList.add('blue-filter');
+    });
 });
 
 
