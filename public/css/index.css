@@ -296,11 +296,13 @@ a {
     background-color: rgb(231, 235, 243);
 }
 
-/* Contact */
-
-#contact-buttons i {
-    font-size: 25pt;
+.close-col {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-end;
 }
+
+/* Contact */
 
 #contact {
     min-height: 25vh;
