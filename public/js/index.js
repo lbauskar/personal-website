@@ -194,6 +194,32 @@ $(function() {
         emailButton.classList.remove('white-filter');
         emailButton.classList.add('blue-filter');
     });
+
+    //elements of tiles slide in on hover
+    const tiles = $('.gallery-item').toArray();
+    for (const tile of tiles) {
+        const above = tile.getElementsByClassName('some-above');
+        const below = tile.getElementsByClassName('some-below');
+        tile.addEventListener('mouseover', () => {
+            for (const elem of above) {
+                elem.classList.add('final-pos');
+            }
+
+            for (const elem of below) {
+                elem.classList.add('final-pos');
+            }
+        });
+
+        tile.addEventListener('mouseout', () => {
+            for (const elem of above) {
+                elem.classList.remove('final-pos');
+            }
+
+            for (const elem of below) {
+                elem.classList.remove('final-pos');
+            }
+        });
+    }
 });
 
 

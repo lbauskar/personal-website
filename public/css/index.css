@@ -159,7 +159,7 @@ a {
     }
 }
 
-/* Projects/Experience */
+/* Tiles */
 
 .gallery {
     display: flex;
@@ -208,6 +208,8 @@ a {
     display: inline-flex;
     width: 100%;
 }
+
+/* Modals */
 
 .modal-fade {
     transform: scale(0.7);
@@ -280,13 +282,25 @@ a {
     font-size: larger;
 }
 
+.some-above {
+    transition: 0.3s;
+    opacity: 0;
+    transform: translateY(-100%);
+}
+
+.some-below {
+    transition: 0.3s;
+    opacity: 0;
+    transform: translateY(100%);
+}
+
+/* Projects/Experience */
+
 #projects-wrapper {
     background-color: rgb(216, 224, 241);
     color: black;
     min-width: 100%;
 }
-
-
 
 #projects .gallery-item .text {
     background-color: rgb(216, 224, 241);
