@@ -69,6 +69,7 @@ const linkedin = lottie.loadAnimation({
     loop: true,
     autoplay: false
 });
+linkedin.setSpeed(0.7);
 
 const github = lottie.loadAnimation({
     container: $('#github-button')[0],
@@ -77,7 +78,7 @@ const github = lottie.loadAnimation({
     loop: true,
     autoplay: false
 });
-github.setSpeed(1.5);
+github.setSpeed(3);
 
 
 const email = lottie.loadAnimation({
@@ -91,7 +92,7 @@ email.setSpeed(1.5);
 
 
 //jquery stuff
-$(function() {
+$(() => {
 
     //make navbar highlight whatever section you're on
     window.addEventListener('scroll', () => {
@@ -217,6 +218,24 @@ $(function() {
 
             for (const elem of below) {
                 elem.classList.remove('final-pos');
+            }
+        });
+    }
+
+    //detail buttons show up when tabbed    
+    const detailButtons = $('.gallery-item button').toArray();
+    for (const detailButton of detailButtons) {
+        const textDiv = detailButton.parentNode;
+        detailButton.addEventListener('focus', () => {
+            textDiv.style.opacity = '1';
+            for (const child of textDiv.children) {
+                child.classList.add('final-pos');
+            }
+        });
+        detailButton.addEventListener('blur', () => {
+            textDiv.style.opacity = '';
+            for (const child of textDiv.children) {
+                child.classList.remove('final-pos');
             }
         });
     }
