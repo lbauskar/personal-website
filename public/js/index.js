@@ -99,11 +99,36 @@ $(function() {
     $('#about').appear();
     $('#about').on('appear', () => {
         const msDelay = 150;
-        const elems = $('.far-left').toArray()
-        for (let i = 0; i < elems.length; ++i) {
-            setTimeout( () => {elems[i].classList.add('final-pos')}, msDelay * (i));
+        const leftElems = $('#about .far-left').toArray();
+        for (let i = 0; i < leftElems.length; ++i) {
+            setTimeout(() => {leftElems[i].classList.add('final-pos')}, msDelay * i);
+        }
+
+        const rightElems = $('#about .far-right').toArray();
+        for (let i = 0; i < rightElems.length; ++i) {
+            setTimeout(() => {rightElems[i].classList.add('final-pos')}, msDelay * i);
         }
     });
+
+    //have project tiles slide from below
+    $('#projects .gallery').appear();
+    $('#projects .gallery').on('appear', () => {
+        const msDelay = 200;
+        const elems = $('#projects .far-below').toArray();
+        for (let i = 0; i < elems.length; ++i) {
+            setTimeout(() => {elems[i].classList.add('final-pos')}, msDelay * i);
+        }
+    });
+
+    //have experience tiles gro
+    $('#experience .gallery').appear();
+    $('#experience .gallery').on('appear', () => {
+        const msDelay = 150;
+        const elems = $('#experience .tiny').toArray();
+        for (let i = 0; i < elems.length; ++i) {
+            setTimeout(() => {elems[i].classList.add('final-pos')}, msDelay * i);
+        }
+    })
 
     
 });

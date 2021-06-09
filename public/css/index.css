@@ -90,12 +90,15 @@ a {
 /* About */
 
 .far-left {
-    transition: 0.5s;
-    transform: translateX(-100vh);
+    opacity: 0;
+    transition: 0.7s ease;
+    transform: translateX(-10vw);
 }
 
-.final-pos {
-    transform: translateX(0) !important;
+.far-right {
+    opacity: 0;
+    transition: 0.7s ease;
+    transform: translateX(10vw);
 }
 
 .me {
@@ -159,6 +162,18 @@ a {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+}
+
+.far-below {
+    opacity: 0;
+    transition: 0.7s;   
+    transform: translateY(20vh); 
+}
+
+.tiny {
+    opacity: 0;
+    transition: 0.5s;
+    transform: scale(0.5);
 }
 
 .gallery-item {
@@ -298,4 +313,11 @@ a {
     color: white;
     background-color: rgb(70, 130, 180);
     border-color: rgb(70, 130, 180);
+}
+
+/* misc */
+
+.final-pos { /*must be after all other transformative classes to work*/
+    opacity: 1;
+    transform: translateX(0) translateY(0) scale(1);
 }
