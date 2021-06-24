@@ -1,3 +1,5 @@
+# Configuration file used for nginx server
+
 upstream nodejs {
     server localhost:5000;
 }
@@ -29,15 +31,4 @@ server {
     return 302 https://lalitbauskar.com$request_uri;
 }
 
-#server {
-#    listen 80;
-#    server_name www.lalitbauskar.com;
-#    rewrite ^/(.*) https://lalitbauskar.com/$1;
-#}
-
-#server {
-#    listen 443;
-#    server_name www.lalitbauskar.com;
-#    rewrite ^/(.*) https://lalitbauskar.com/$1;
-#}
 

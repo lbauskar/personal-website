@@ -1,0 +1,1 @@
+sitemap: http://lalitbauskar.com/sitemap.xml
