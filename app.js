@@ -14,4 +14,7 @@ app.set("viewengine", "ejs");
 app.use(bodyParser.urlencoded({extended: true}));
 app.use("/", routes);
 
+app.set('trust proxy', true);
+app.set('trust proxy', 'loopback');
+
 module.exports = app;
