@@ -185,6 +185,12 @@ a {
     max-width: 35vh;
 }
 
+@media (min-width: 1200px) {
+    .gallery-item {
+        max-width: 33%;
+    }
+}
+
 .gallery-item .text {
     padding-top: 20%;
     text-align: center;

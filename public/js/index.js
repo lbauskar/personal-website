@@ -119,6 +119,11 @@ $(() => {
             setTimeout(() => {stars[i].play()}, msDelay * (i + 1));
         }
 
+        const rightElems = $('#skill-stars .far-right').toArray();
+        for (let i = 0; i < rightElems.length; ++i) {
+            setTimeout(() => {rightElems[i].classList.add('final-pos')}, msDelay * i);
+        }
+
         $('.stars svg').attr('viewBox', '40 30 160 40');
         $('.stars svg').attr('width', '90');
         $('.stars svg').attr('height', '40');
@@ -131,11 +136,6 @@ $(() => {
         const leftElems = $('#about .far-left').toArray();
         for (let i = 0; i < leftElems.length; ++i) {
             setTimeout(() => {leftElems[i].classList.add('final-pos')}, msDelay * i);
-        }
-
-        const rightElems = $('#about .far-right').toArray();
-        for (let i = 0; i < rightElems.length; ++i) {
-            setTimeout(() => {rightElems[i].classList.add('final-pos')}, msDelay * i);
         }
     });
 
