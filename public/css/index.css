@@ -1,14 +1,27 @@
 /* Universal */
+:root {
+    --offwhite: #e7ebf3;
+    --lightpurple: #aa4de0;
+    --grey: #5c5c5c;
+    --darkgrey: #444;
+    --blue: #4682b4;
+    --darkestgrey: #202228;
+    --darkergrey: #343a40;
+    --purple: #791fad;
+    --paleblue: #d8e0f1;
+    --darkblue: #0051a8;
+}
 
 html {
     font-family: Lato, sans-serif;
     width: 100%;
     height: 100%;
+    font-size: 120%;
 }
 
 body {
-    background: #202228;
-    color: white;
+    background: var(--darkestgrey);
+    color: var(--offwhite);
     padding: 0;
     margin: 0;
     height: 100%;
@@ -18,7 +31,7 @@ body {
 h1 {
     font-family: Oswald, sans-serif;
     text-align: center;
-    font-size: 38pt;
+    font-size: 3.2rem;
     margin: 0;
 }
 
@@ -44,16 +57,20 @@ a {
     flex-direction: column;
 }
 
+#home h1, #contact {
+    color: var(--offwhite);
+}
+
 #name-span {
-    color: rgb(170, 77, 224);
+    color: var(--lightpurple);
     display: inline-block;
 }
 
 
 #cursor {
-    color: rgb(170, 77, 224);
+    color: var(--lightpurple);
     animation-name: blink;
-    animation-iteration-count: 7;
+    animation-iteration-count: 5;
     animation-duration: 300ms;
     animation-direction: alternate;
     animation-fill-mode: forwards;
@@ -61,14 +78,14 @@ a {
 }
 
 #see-more-btn {
-    color: white;
-    border-color:white;
+    color: var(--offwhite);
+    border-color:var(--offwhite);
 }
 
 #see-more-btn:hover, #see-more-btn:active, #see-more-btn:focus {
-    color: white;
-    background-color: rgb(170, 77, 224);
-    border-color: rgb(170, 77, 224);
+    color: var(--offwhite);
+    background-color: var(--lightpurple);
+    border-color: var(--lightpurple);
 }
 
 @keyframes blink {
@@ -85,6 +102,20 @@ a {
 
 
 /* Navbar */
+
+nav.navbar {
+    background-color: var(--darkergrey);
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+nav.navbar .navbar-toggler {
+    border: none;
+}
+
+.active .nav-link {
+    color: var(--offwhite) !important;
+}
 
 .nav-link:hover {
     cursor: pointer;
@@ -104,13 +135,34 @@ a {
     transform: translateX(10vw);
 }
 
-.me {
+
+
+#profile-picture-container {
+    margin-left: auto;
+    margin-right: auto;
+    justify-self: center;
+    width: fit-content;
+    position: relative;
+}
+
+#profile-picture-container img {
     max-width: 75vw;
     max-height: 30vh;
     border-radius: 50%;
-    -moz-border-radius: 50%;
-    -webkit-border-radius: 50%;
-    -o-border-radius: 50%;
+}
+
+#profile-picture-container::after {
+    content: "";
+    width: 95%;
+    height: 95%;
+    border-style: solid;
+    border-width: medium;
+    border-color: var(--offwhite);
+    position: absolute;
+    top: 2.5%;
+    left: 2.5%;
+    border-radius: 100%;
+    opacity: 0.5;
 }
 
 .stars-label {
@@ -128,13 +180,25 @@ a {
 }
 
 .stars svg {
+    filter: invert(20%) sepia(0%) saturate(58%) hue-rotate(194deg) brightness(93%) contrast(73%);
     height: 25pt !important;
 }
 
 #about-wrapper, #experience-wrapper {
-    background-color: rgb(231, 235, 243);
-    color: black;
+    background-color: var(--offwhite);
+    color: var(--darkgrey);
     min-width: 100%;
+}
+
+#about .btn-outline-dark, #experience .btn-outline-dark {
+    color: var(--darkgrey);
+    border-color: var(--darkgrey);
+}
+
+#about .btn-outline-dark:hover, #about .btn-outline-dark:focus, #about .btn-outline-dark:active, 
+#experience .btn-outline-dark:hover, experience .btn-outline-dark:focus, experience .btn-outline-dark:active {
+    background-color: var(--darkgrey);
+    color: var(--offwhite);
 }
 
 
@@ -191,24 +255,32 @@ a {
     }
 }
 
+@media (min-width: 400px) {
+    .gallery-item .text {
+        padding-top: 20% !important;
+    }
+}
+
 .gallery-item .text {
-    padding-top: 20%;
+    padding-top: 10%;
     text-align: center;
     position: absolute;
     width: 100%;
     height: 100%;
-    text-align: center;
     opacity: 0;
     transition: .5s ease;
+    align-self: center;
 }
 
 .gallery-item .text:hover {
     opacity: 1;
 }
 
+
 .gallery-item .text p {
-    color:blueviolet;
+    color:var(--purple);
 }
+
 
 .gallery-item img {
     display: inline-flex;
@@ -244,20 +316,33 @@ a {
     border-radius: 0;
 }
 
+#projects .modal-content {
+    background-color: var(--paleblue);
+    color: var(--darkergrey);
+}
+
+#experience .modal-content {
+    background-color: var(--offwhite);
+    color: var(--darkgrey);
+}
+
 
 .modal-content h2 {
+    padding-left: 15px;
     font-weight: bold;
 }
 
 .modal-content h3 {
-    color: rgb(122, 122, 122);
+    padding-left: 15px;
+    /*: var(--grey);*/
     font-size: larger;
 }
 
 .modal-content hr {
     width: 30%;
-    color: slategray;
-    margin-left: 0;
+    /*color: var(--grey);*/
+    margin-left: 15px;
+    height: 2px;
 }
 
 .modal-content .text {
@@ -283,9 +368,31 @@ a {
     margin-top: 10px;
 }
 
+.modal-content .btn-outline-primary {
+    color: var(--grey);
+    border-color: var(--darkblue);
+}
+
+.modal-content .btn-outline-primary:hover,
+.modal-content .btn-outline-primary:focus,
+.modal-content .btn-outline-primary:active {
+    background-color: var(--darkblue);
+    color: #fff;
+} 
+
 .close-modal {
-    color: rgb(122, 122, 122);
+    color: var(--darkgrey);
     font-size: larger;
+}
+
+@media(max-width: 450px) {
+    .modal-content {
+        font-size: 0.8rem;
+    }
+}
+
+.no-click {
+    pointer-events: none;
 }
 
 .some-above {
@@ -303,17 +410,17 @@ a {
 /* Projects/Experience */
 
 #projects-wrapper {
-    background-color: rgb(216, 224, 241);
-    color: black;
+    background-color: var(--paleblue);
+    color: var(--darkergrey);;
     min-width: 100%;
 }
 
 #projects .gallery-item .text {
-    background-color: rgb(216, 224, 241);
+    background-color: var(--paleblue);
 }
 
 #experience .gallery-item .text {
-    background-color: rgb(231, 235, 243);
+    background-color: var(--offwhite);
 }
 
 .close-col {
@@ -325,19 +432,18 @@ a {
 /* Contact */
 
 #contact {
-    min-height: 25vh;
     text-align: center;
 }
 
 #contact .btn {
-    color: rgb(70, 130, 180);
-    border-color: rgb(70, 130, 180);
+    color: var(--blue);
+    border-color: var(--blue);
 }
 
 #contact .btn:hover, #contact .btn:active, #contact .btn:focus {
-    color: white;
-    background-color: rgb(70, 130, 180);
-    border-color: rgb(70, 130, 180);
+    color: var(--offwhite);
+    background-color: var(--blue);
+    border-color: var(--blue);
 }
 
 .blue-filter svg {
@@ -345,12 +451,13 @@ a {
 }
 
 .white-filter svg {
-    filter: invert(100%) sepia(6%) saturate(0%) hue-rotate(24deg) brightness(107%) contrast(106%);
+    filter: invert(100%) sepia(3%) saturate(759%) hue-rotate(288deg) brightness(117%) contrast(84%);
 }
 
 #contact svg {
     height: 30pt !important;
     width: auto !important;
+    pointer-events: none;
 }
 
 /* misc */
@@ -359,3 +466,4 @@ a {
     opacity: 1;
     transform: translateX(0) translateY(0) scale(1);
 }
+
