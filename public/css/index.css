@@ -26,12 +26,13 @@ body {
     margin: 0;
     height: 100%;
     min-width: 100%;
+    overflow-x: hidden;
 }
 
 h1 {
     font-family: Oswald, sans-serif;
     text-align: center;
-    font-size: 3.2rem;
+    font-size: 4.2rem;
     margin: 0;
 }
 
@@ -229,6 +230,7 @@ nav.navbar .navbar-toggler {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    max-width: 100%;
 }
 
 .far-below {
@@ -250,8 +252,11 @@ nav.navbar .navbar-toggler {
 }
 
 @media (min-width: 1200px) {
+    #projects.section, #experience.section {
+        max-width: 80% !important;
+    }
     .gallery-item {
-        max-width: 33%;
+        max-width: 30%;
     }
 }
 
@@ -334,13 +339,11 @@ nav.navbar .navbar-toggler {
 
 .modal-content h3 {
     padding-left: 15px;
-    /*: var(--grey);*/
     font-size: larger;
 }
 
 .modal-content hr {
     width: 30%;
-    /*color: var(--grey);*/
     margin-left: 15px;
     height: 2px;
 }
@@ -430,6 +433,35 @@ nav.navbar .navbar-toggler {
 }
 
 /* Contact */
+
+#bottom-chevron {
+    position: relative;
+    width: 100%;
+}
+
+#bottom-chevron::before {
+    width: 50%;
+    height: 16vh;
+    top: 0;
+    margin-left: 0;
+    margin-top: -14vh;
+    content: '';
+    clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 14vh);
+    background-color: var(--darkestgrey);
+    position: absolute;
+}
+
+#bottom-chevron::after {
+    width: 50%;
+    height: 16vh;
+    top: 0;
+    margin-top: -14vh;
+    margin-left: 50%;
+    content: '';
+    clip-path: polygon(0 14vh, 0 100%, 100% 100%, 100% 0);
+    background-color: var(--darkestgrey);
+    position: absolute;
+}
 
 #contact {
     text-align: center;
