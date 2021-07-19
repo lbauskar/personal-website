@@ -426,6 +426,13 @@ nav.navbar .navbar-toggler {
     background-color: var(--offwhite);
 }
 
+@media(max-width: 1200px) {
+    #experience:last-child {
+        padding-bottom: 10vw;
+    }
+}
+
+
 .close-col {
     display: flex;
     flex-direction: row-reverse;
@@ -441,24 +448,24 @@ nav.navbar .navbar-toggler {
 
 #bottom-chevron::before {
     width: 50%;
-    height: 16vh;
+    height: 10vw;
     top: 0;
     margin-left: 0;
-    margin-top: -14vh;
+    margin-top: -8vw;
     content: '';
-    clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 14vh);
+    clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 8vw);
     background-color: var(--darkestgrey);
     position: absolute;
 }
 
 #bottom-chevron::after {
     width: 50%;
-    height: 16vh;
+    height: 10vw;
     top: 0;
-    margin-top: -14vh;
+    margin-top: -8vw;
     margin-left: 50%;
     content: '';
-    clip-path: polygon(0 14vh, 0 100%, 100% 100%, 100% 0);
+    clip-path: polygon(0 8vw, 0 100%, 100% 100%, 100% 0);
     background-color: var(--darkestgrey);
     position: absolute;
 }
